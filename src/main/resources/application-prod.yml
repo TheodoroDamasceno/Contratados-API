@@ -1,0 +1,31 @@
+server:
+  port: 8080
+#  servelet:
+#    context-path: /contratados
+
+# Sql
+spring:
+  application:
+    name: contratados-api
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+
+  datasource:
+    # usuário e senha de conexão com o banco de dados
+    username: root
+    password: password
+    # url de conexão do banco de dados
+    url: jdbc:mysql://localhost:3306/contratados?allowPublicKeyRetrieval=true&sslMode=DISABLED&useSSL=false&serverTimezone=UTC
+
+    #url: jdbc:mysql://localhost:3306/contratados?sessionVariables=sql_mode='NO_ENGINE_SUBSTITUTION'&jdbcCompliantTruncation=false
+
+# jwt
+contratados:
+  jwt:
+    secret: A+X;fTJP&Pd,TD9dwVq(hsHX,ya^<wsD_UK7L+@=S;{'CydP]{v@}G'b>et;yz$*\yL5S8EJN:%P:X%H9>#nYLrX}@\s?CQcpspH,2emzBc!Q[V'AYa~uzF8WR~AUrMzxp/V$9([S9X#zj/CH('#]B_Hc+%fGhe27YB;^j4\Xk=Ju"Ap~_&<L;=!Z;!,2UP;!hF3P]j85#*`&T]/kB/W^6$v~u6qpejL>kY^f)sy4:qTq_Ec!-z!@aAp~sLKGU>$
+    expiration: 86400000
